@@ -51,7 +51,7 @@ func main() {
 
 	fmt.Println("Connected to MongoDB")
 
-	serv.db = db1 // капец
+	serv.db = db1
 	serv.api = api.New(serv.db)
 
 	http.ListenAndServe(":8080", serv.api.Router())
